@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: service
+metadata:
+     name: mynginxsrv
+spec:
+   type: Nodeport
+   ports:
+     - port: 80
+       targetport: 80
+   selector:
+     app: dev
